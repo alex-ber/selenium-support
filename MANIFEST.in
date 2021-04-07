@@ -1,0 +1,7 @@
+include *.md
+include *.txt
+recursive-include tests *.py
+recursive-include tests_data *.ini
+recursive-include tests_data *.properties
+recursive-include tests_data *.py
+recursive-include data *.py
