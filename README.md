@@ -50,6 +50,34 @@ python3 -m pip install -r requirements.txt # only installs "required"
 python3 -m pip install -r requirements-tests.txt # installs dependencies for tests
 ```
 
+
+### Using Docker
+`alexberkovich/selenium_support:latest`  contains all `selenium_support` dependencies.
+This Dockerfile is very simple, you can take relevant part for you and put them into your Dockerfile.
+
+##
+Alternatively, you can use it as base Docker image for your project and add/upgrade 
+another dependencies as you need.
+
+For example:
+
+```Dockerfile
+FROM alexberkovich/selenium_support:latest
+
+COPY requirements.txt etc/requirements.txt
+
+RUN set -ex && \
+    #latest pip,setuptools,wheel
+    pip install --upgrade pip setuptools wheel && \
+    pip install selenium_support 
+    pip install -r etc/requirements.txt 
+
+CMD ["/bin/sh"]
+#CMD tail -f /dev/null
+```
+
+where `requirements.txt` is requirements for your project.
+
 ##
 
 From the directory with setup.py

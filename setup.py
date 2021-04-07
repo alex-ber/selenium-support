@@ -5,7 +5,7 @@ from setuptools import setup
 
 
 #VERSION should be defined before importing UploadCommand
-VERSION = '0.0.1b'
+VERSION = '0.0.1b1'
 from alexber.utils import UploadCommand
 NAME = 'selenium_support'
 SHORT_NAME = 'seleniumsupport'
@@ -79,8 +79,7 @@ try:
         namespace_packages=('alexber',),
         license='Apache 2.0',
         keywords='Selenium support BMP browsermobproxy web_driver driver Chrome Firefox har download  ' \
-                 'issetdescriptor ismethod ' \
-                 'importer new_instance safe_eval is_empty parse_boolean Properties java.util.Properties',
+                 'wait wait_page_loaded click click_sync wait_chrome_file_finished_downloades wait_for_display',
         classifiers=[
             # See: https://pypi.python.org/pypi?:action=list_classifiers
             'Development Status :: 5 - Production/Stable',
@@ -93,8 +92,6 @@ try:
             # https://en.wikipedia.org/wiki/CPython#Version_history
             'Programming Language :: Python',
             'Programming Language :: Python :: 3 :: Only',
-            'Programming Language :: Python :: 3.6',
-            'Programming Language :: Python :: 3.7',
             'Programming Language :: Python :: 3.8',
             'Programming Language :: Python :: Implementation :: CPython',
             "Topic :: Utilities",
@@ -107,7 +104,7 @@ try:
             'Operating System :: Unix',
             'Natural Language :: English',
         ],
-        python_requires='>=3.6',
+        python_requires='>=3.8',
         zip_safe=False,
 
     )

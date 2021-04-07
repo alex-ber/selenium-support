@@ -1,3 +1,4 @@
+alex-ber-utils==0.6.5
 attrs==20.2.0
 mock==4.0.2
 py==1.9.0
