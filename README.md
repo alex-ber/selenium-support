@@ -1,26 +1,44 @@
 ## selenium-support
 
-TODO:
+I’ve started to use Selenium’s related products and how found that documentation is misleading, it doesn’t promote 
+best practice. 
 
+Moreover, many components has memory/resource leaks that are not fixed for years.
+ 
+So I’ve created utility project that encapsulated my “fixes” to Selenium and promotes best practice.
+
+I will list some of the capabilities of my library:
+
+* create/destroy BmpDaemon(aka browsermobproxy.Server).
+* create/destroy BmpProxy (aka browsermobproxy.Client).
+* create/destroy SeleniumWebDriver (for example selenium.webdriver.Chrome.webdriver). (Can be any supported browser).
+* Taking screenshots.
+* Preparing browser’s data-dir for usage.
+* Enabling browser to download files.
+* Capturing network in har format.
+* Waiting for page to load.
+* Synchronous click (on the button).
+* Wait for Google Chrome to finish to download file (Chrome specific).
+* Wait for display.
 
 ### Getting Help
 
 
 ### QuickStart
 ```bash
-python3 -m pip install -U selenium-support
+python -m pip install -U selenium-support
 ```
 
 
 ### Installing from Github
 
 ```bash
-python3 -m pip install -U https://github.com/alex-ber/selenium-support/archive/master.zip
+python -m pip install -U https://github.com/alex-ber/selenium-support/archive/master.zip
 ```
 Optionally installing tests requirements.
 
 ```bash
-python3 -m pip install -U https://github.com/alex-ber/selenium-support/archive/master.zip#egg=alex-ber-utils[tests]
+python -m pip install -U https://github.com/alex-ber/selenium-support/archive/master.zip#egg=alex-ber-utils[tests]
 ```
 
 Or explicitly:
@@ -33,21 +51,21 @@ And then installing from source (see below).
 
 ### Installing from source
 ```bash
-python3 -m pip install -r req.txt # only installs "required" (relaxed)
+python -m pip install -r req.txt # only installs "required" (relaxed)
 ```
 ```bash
-python3 -m pip install . # only installs "required"
+python -m pip install . # only installs "required"
 ```
 ```bash
-python3 -m pip install .[tests] # installs dependencies for tests
+python -m pip install .[tests] # installs dependencies for tests
 ```
 
 #### Alternatively you install install from requirements file:
 ```bash
-python3 -m pip install -r requirements.txt # only installs "required"
+python -m pip install -r requirements.txt # only installs "required"
 ```
 ```bash
-python3 -m pip install -r requirements-tests.txt # installs dependencies for tests
+python -m pip install -r requirements-tests.txt # installs dependencies for tests
 ```
 
 
@@ -82,7 +100,7 @@ where `requirements.txt` is requirements for your project.
 
 From the directory with setup.py
 ```bash
-python3 setup.py test #run all tests
+python setup.py test #run all tests
 ```
 
 or
@@ -104,8 +122,8 @@ python38 -m pip install --find-links=./dist selenium-support==0.1
 ```
 
 
-```bash
-python3 setup.py sdist upload
+```bas  h
+python setup.py sdist upload
 ```
 
 ## Requirements

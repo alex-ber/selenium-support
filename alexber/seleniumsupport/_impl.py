@@ -471,7 +471,7 @@ def wait_chrome_file_finished_downloades(file_name, downloadsPath, default_sleep
     while retries > 0:
         #https://docs.python.org/3/library/os.html#os.scandir
         #https://msdn.microsoft.com/en-us/library/windows/desktop/aa364418(v=vs.85).aspx
-        #https://docs.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findnextfilea?redirectedfrom=MSDN
+        #https://msdn.microsoft.com/en-us/library/windows/desktop/aa364428(v=vs.85).aspx
         #In rare cases or on a heavily loaded system, file attribute information on
         #NTFS file systems may not be current at the time this function is called.
         #We want to give a filesystem time to sync with Python's System Call

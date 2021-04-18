@@ -5,7 +5,7 @@ from setuptools import setup
 
 
 #VERSION should be defined before importing UploadCommand
-VERSION = '0.0.1b1'
+VERSION = '0.0.1'
 from alexber.utils import UploadCommand
 NAME = 'selenium_support'
 SHORT_NAME = 'seleniumsupport'
